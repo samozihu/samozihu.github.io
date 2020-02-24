@@ -1,6 +1,6 @@
 # Site settings
-title: samozihu 碎碎念 
-SEOTitle: samozihu | blog | 技术
+title: aguozhang 碎碎念
+SEOTitle: aguozhang| blog | 技术
 header-img: img/home-bg.jpg
 email: samozihu@qq.com
 description: "还没有想好呢, #todo"
@@ -79,7 +79,7 @@ ga_domain: samozihu.me
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "好吧，就这样吧"
-sidebar-avatar: /img/avatar-hux-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/aguozhang-ny.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
