@@ -12,4 +12,21 @@ tags:
     - source code
 ---
 
-## todo
+## # laravel的启动流程
+
+
+
+## 总启动流程
+
+
+
+## Http requests启动流程
+
+
+
+## Console command (artisan)启动流程
+
+
+
+## 总结
+
