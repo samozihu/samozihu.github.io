@@ -13,7 +13,7 @@ tags:
     - code analysis 
 ---
 ## 什么是Cache
-Cache就是把取到或计算出来的数据暂存起来，下次用的时候从这个地方取，以此提高性能。
+Cache就是把取到或计算出来的数据暂存起来，下次用的时候从这个地方取。
 
 ## Cache的作用
 Cache主要作用是提高性能，节省资源。
@@ -81,6 +81,21 @@ class CacheServiceProvider extends ServiceProvider
 通过CacheServiceProvider, 注入了cache, cache.store.
 Cache facade对应的就是注入的cache, 返回的是一个CacheManager实例。
 cache.store对应的是一个默认的cache repository.
+
+注入的cache实际上是一个CacheManager, 但也可当作Cache repository来使用，是通过如下代码实现的：
+```php
+   /**
+     * Dynamically call the default driver instance.
+     *
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return mixed
+     */
+    public function __call($method, $parameters)
+    {
+        return $this->store()->$method(...$parameters);
+    }
+```
 
 ## Cache配置文件
 ```
@@ -413,8 +428,22 @@ interface Factory
 ```
 
 ## Cache代码实现
+Cache的代码实现主要集中在Cache store的实现的。其余的功能不需要开发者改动。
+新实现一个Cache，只需要如下步骤：
+1. 新建类并实现Store接口。
+2. 根据新建类的构造参数配置config文件
+    ```
+        'newname' => [
+                    'driver' => 'driverName',
+                    'extra' => 'xxx'
+                ],
+    ```
+3. 在 Cache provider中注册新的cache实现
+    ```
+        $this->app['cache']->extend('driverName', function($app, $config){ //do something and return new store instance});
+    ``` 
+4. 通过 Cache::store('newname')->get() 或 cache('newname')->get()使用
 
-## Cache的使用示例
 
 ## 总结
 Cache的实现和提供服务的方式是laravel中一种很经典的方法。从代码设计上来说很优雅。虽然cache的实现有很多种，但最终用户基本无感知。用户最终要做就
