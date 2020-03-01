@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "要想走得快，早到达，先找到路的方向"
+title:      "要想走得快,早到达,先找到路的方向"
 subtitle:   "关于云端专病库开发的一点感想"
 date:       2020-02-29 16:16:00
 author:     "aguozhang"
