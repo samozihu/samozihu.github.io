@@ -1,15 +1,14 @@
 ---
 layout:     post
-title:      "要想走得快,早到达,先找到路的方向"
-subtitle:   "关于云端专病库开发的一点感想"
-date:       2020-02-29 16:16:00
+title:      "要想走得快，早到达，先抬头找到路的方向"
+subtitle:   "近期开发的一点感悟"
+date:       2020-03-01 12:39:00
 author:     "aguozhang"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 感情 
-    - 如何做事
+    - 感悟
     - 思考
-    - 行动 
+    - 赶路
 ---
 
 ## 背景
