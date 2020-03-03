@@ -114,8 +114,11 @@ friends: [
     },{
         title: "褚霸",
         href: "http://blog.yufeng.info/"
-      },{
+    },{
         title: "鸟哥",
         href: "https://www.laruence.com/"
-      }
+    },{
+        title: "峰哥",
+        href: "http://rango.swoole.com/"
+   }
 ]
