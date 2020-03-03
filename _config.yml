@@ -112,7 +112,10 @@ friends: [
         title: "云风",
         href: "https://blog.codingnow.com/"
     },{
-      title: "褚霸",
-      href: "http://blog.yufeng.info/"
-    }
+        title: "褚霸",
+        href: "http://blog.yufeng.info/"
+      },{
+        title: "鸟哥",
+        href: "https://www.laruence.com/"
+      }
 ]
